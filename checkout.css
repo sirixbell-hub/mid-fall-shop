@@ -1,0 +1,169 @@
+/* Container ของ Checkout เหมือน cart-container */
+.checkout-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fffaf0;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+/* หัวข้อ */
+.checkout-container h1,
+.checkout-container h2 {
+  text-align: center;
+  color: #c40000;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* ปุ่มชำระเงินและกลับ */
+.checkout-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkout-buttons button {
+  flex: 1 1 200px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid #ff6a00;
+  background: white;
+  color: #c40000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.checkout-buttons button:hover {
+  background: #ff6a00;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ฟอร์มที่อยู่จัดส่ง */
+.delivery-container {
+  background: #fff5f0;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.15);
+}
+
+.delivery-container h2 {
+  color: #ff3c00;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.delivery-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.delivery-container button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #ff6a00;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delivery-container button:hover {
+  background: #c40000;
+  transform: scale(1.05);
+}
+
+/* QR Scanner */
+#qr-reader {
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,.2);
+}
+
+#qr-result {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ปุ่มสแกน QR */
+#qr-reader + div button,
+#qr-result + div button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 2px solid #ff6a00;
+  background: white;
+  color: #c40000;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#qr-reader + div button:hover,
+#qr-result + div button:hover {
+  background: #ff6a00;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 600px) {
+  .checkout-buttons button {
+    flex: 1 1 100%;
+  }
+}
+
+/* ปุ่มชำระเงินและกลับ */
+.checkout-buttons {
+  display: flex;
+  flex-wrap: wrap;       /* ให้เลื่อนลงบรรทัดเมื่อจอเล็ก */
+  gap: 15px;             /* เว้นระยะระหว่างปุ่ม */
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.checkout-buttons button {
+  flex: 1 1 200px;       /* ขยายเต็มที่ใน row และขั้นต่ำ 200px */
+  padding: 12px 20px;    /* สูง/กว้างของปุ่ม */
+  border-radius: 12px;   /* มุมโค้ง */
+  border: 2px solid #ff6a00;  /* ขอบส้ม */
+  background: white;      /* พื้นขาว */
+  color: #c40000;         /* ตัวอักษรแดงเข้ม */
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.checkout-buttons button:hover {
+  background: #ff6a00;   /* พื้นส้มเมื่อ hover */
+  color: white;          /* ตัวอักษรขาว */
+  transform: scale(1.05); /* ขยายเล็กน้อย */
+}
+
+/* Responsive สำหรับมือถือ */
+@media (max-width: 600px) {
+  .checkout-buttons button {
+    flex: 1 1 100%;      /* ให้เต็มความกว้าง */
+  }
+}

@@ -1,0 +1,117 @@
+/* Container และ Grid */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff6a00;
+  margin-bottom: 12px;
+}
+
+/* ปุ่มเพิ่มตะกร้า */
+.product-card button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #ff6a00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.2s, transform 0.2s;
+}
+
+.product-card button:hover {
+  background-color: #c40000;
+  transform: scale(1.05);
+}
+.product-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;             /* ใช้ Flexbox */
+  flex-direction: column;    /* จัดแนวตั้ง */
+  justify-content: space-between; /* ดันปุ่มลงด้านล่าง */
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+  flex-grow: 1; /* ให้ชื่อสินค้าขยายพื้นที่ได้ */
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff6a00;
+  margin-bottom: 12px;
+}
+
+.product-card button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: #ff6a00;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: 0.2s, transform 0.2s;
+}
+
+/* สินค้าลอยเข้าไอคอน */
+.flying-img {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  pointer-events: none;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+  z-index: 9999;
+}

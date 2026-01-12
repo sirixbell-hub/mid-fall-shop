@@ -1,0 +1,104 @@
+/* พื้นหลังของทั้งหน้า */
+body {
+  background-color: #fff8e7; /* สีครีมอ่อน */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* กล่อง container ของประวัติ */
+.history-container{
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fffaf0; /* ปรับให้เป็นครีมอ่อนๆ */
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+/* ชื่อหัวข้อ */
+.history-title{
+  text-align: center;
+  color: #c40000;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* รายการสินค้า */
+.history-list{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* แต่ละรายการ */
+.history-list li{
+  background: #fff5f0;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.15);
+  border-left: 6px solid #ff6a00;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* เอฟเฟกต์ hover ให้ลอยขึ้นเล็กน้อย */
+.history-list li:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,.25);
+}
+
+.history-list li strong{
+  color: #ff3c00;
+}
+
+/* แถวรูปและข้อมูล */
+.history-row{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.history-row img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,.3);
+  transition: transform 0.3s;
+}
+
+.history-row img:hover{
+  transform: scale(1.05);
+}
+
+/* ข้อมูลสินค้า */
+.history-info{
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Footer / ปุ่มกลับ */
+.history-footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.btn-back{
+  background: white;
+  border: 2px solid #ff6a00;
+  color: #c40000;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-back:hover{
+  background: #ff6a00;
+  color: white;
+}

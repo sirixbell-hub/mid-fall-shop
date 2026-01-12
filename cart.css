@@ -1,0 +1,134 @@
+/* Container ของตะกร้า */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fffaf0;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.2);
+}
+
+/* ชื่อหัวข้อ */
+.cart-container h2 {
+  text-align: center;
+  color: #c40000;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* ตาราง */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Header */
+.cart-table th {
+  background-color: #ff6a00;
+  color: white;
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 12px 12px 0 0; /* มุมโค้งเฉพาะด้านบน */
+}
+
+/* Cell */
+.cart-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+/* รูปสินค้า */
+.cart-table img {
+  width: 60px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+/* ปุ่มลบ */
+.cart-table button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: #fffffe;
+  color: rgb(240, 2, 2);
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.cart-table button:hover {
+  background-color: #c40000;
+  transform: scale(1.1);
+}
+
+/* ราคารวม */
+#total-price {
+  font-weight: bold;
+  font-size: 22px;
+  color: #c40000;
+  text-align: right;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Responsive table ให้มือถือ */
+@media (max-width: 600px) {
+  .cart-table th, .cart-table td {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .cart-table img {
+    width: 50px;
+  }
+}
+
+
+/* Header ตะกร้า */
+.cart-header {
+  background-color: #fffaf0; /* สีครีมอ่อน */
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+/* ชื่อหัวข้อ */
+.cart-header h2 {
+  font-size: 24px;
+  color: #c40000;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* กลุ่มปุ่ม */
+.nav-btn {
+  display: flex;
+  gap: 12px;
+}
+
+/* ปุ่ม */
+.nav-btn button {
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nav-btn button:hover {
+  background-color: #c40000;
+  transform: scale(1.05);
+}
+
+
