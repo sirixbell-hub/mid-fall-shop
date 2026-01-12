@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ประวัติการซื้อ | Mid Fall</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/history.css">
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo-fire" onclick="goHome()" style="cursor:pointer;">
+    🔥 Mid Fall 🔥
+  </h1>
+</header>
+
+<div class="history-container">
+  <h2 class="history-title">📜 ประวัติการซื้อ</h2>
+
+  <ul id="history-list" class="history-list"></ul>
+
+  <div class="history-footer">
+    <button class="btn-back" onclick="goHome()">กลับหน้าแรก</button>
+    <button class="btn-back" onclick="clearHistory()">ลบประวัติทั้งหมด</button>
+    <button class="btn-back" onclick="goToCart()">กลับหน้าตะกร้า</button>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="./js/cart.js"></script>
+<script src="./js/history.js"></script>
+
+<script>
+  renderHistory();
+</script>
+
+</body>
+</html>

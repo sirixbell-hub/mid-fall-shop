@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ชำระเงิน | Mid Fall</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/checkout.css">
+</head>
+
+<body>
+
+<h2>💳 ชำระเงิน</h2>
+
+<!-- ปุ่มชำระเงินและกลับ -->
+<div class="checkout-buttons">
+  <button onclick="payBank()">ชำระผ่านธนาคาร</button>
+  <button onclick="payCOD()">เก็บเงินปลายทาง</button>
+  <button onclick="goHome()">กลับหน้าแรก</button>
+  <button onclick="goToCart()">กลับหน้าตะกร้า</button>
+</div>
+
+<!-- ฟอร์มที่อยู่จัดส่ง -->
+<div class="delivery-container">
+  <h2>ที่อยู่จัดส่ง</h2>
+
+  <input type="text" id="name" placeholder="ชื่อผู้รับ">
+  <input type="text" id="address" placeholder="ที่อยู่">
+  <input type="text" id="phone" placeholder="เบอร์โทร">
+
+  <button onclick="saveDelivery()">บันทึกที่อยู่</button>
+</div>
+
+<!-- QR Scanner -->
+<div id="qr-reader"></div>
+<div id="qr-result">ผลลัพธ์ QR Code จะปรากฏที่นี่</div>
+
+<!-- JS -->
+<script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+
+<script src="./js/cart.js"></script>
+<script src="./js/products.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/checkout.js"></script>
+
+</body>
+</html>

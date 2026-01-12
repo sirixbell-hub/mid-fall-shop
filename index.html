@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Mid Fall</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+<header>
+  <!-- ชื่อร้าน -->
+  <h1 onclick="goHome()" style="cursor:pointer;">Mid Fall</h1>
+
+  <!-- เมนู -->
+  <nav>
+    <button onclick="location.href='./login.html'">ล็อกอิน</button>
+    <button id="logout-btn" onclick="logout()" style="display:none;">ออกจากระบบ</button>
+    <button onclick="goToPurchaseHistory()">ประวัติการซื้อ</button>
+
+    <input type="text" id="search" placeholder="ค้นหาสินค้า">
+    <button onclick="searchProduct()">ค้นหา</button>
+
+    <span class="cart-icon" onclick="goToCart()">
+      🛒 <span id="cart-count">0</span>
+    </span>
+  </nav>
+</header>
+
+<!-- เนื้อหา -->
+<div class="container">
+  <div class="product-grid" id="product-list">
+    <!-- render ด้วย JS -->
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script src="./js/products.js"></script>
+<script src="./js/cart.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/auth.js"></script>
+
+<script>
+  renderProducts();
+  updateCartCount();
+</script>
+
+</body>
+</html>
